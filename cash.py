@@ -1,5 +1,17 @@
 coins = [25, 10, 5, 1]
 
+def is_positive_number(input: str) -> bool:
+    if input == 'Nan':
+        return False
+    try:
+        float(input)
+        if float(input) >= 0:
+            return True
+        else:
+            return False
+    except ValueError:
+        return False
+
 def calculate_minimum_coins(amount_in_dollars: float) -> int:
     amount_in_cents = int(amount_in_dollars * 100)
     number_of_coins = 0
