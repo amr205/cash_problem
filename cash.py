@@ -2,12 +2,12 @@ coins = [25, 10, 5, 1]
 
 def main():
     # ask for user input until valid
-    input = input("Change owed: ")
-    while not is_positive_number(input):
-        input = input("Change owed: ")
+    user_input = input("Change owed: ")
+    while not is_positive_number(user_input):
+        user_input = input("Change owed: ")
 
     #calculate and print
-    minimum_number_of_coins = calculate_minimum_coins(float(input))
+    minimum_number_of_coins = calculate_minimum_coins(float(user_input))
     print(minimum_number_of_coins)
 
 def is_positive_number(input: str) -> bool:
